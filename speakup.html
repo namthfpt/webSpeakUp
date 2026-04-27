@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeakUp – Tìm Bạn Học Giao Tiếp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+      <div class="header-inner">
+        <a
+          class="logo"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        >
+          <img
+            src="logo.png"
+            alt="SpeakUp Logo"
+            style="height: 50px; width: auto; border-radius: 14px"
+          />
+          <span class="logo-text">SPEAK<span>UP</span></span>
+        </a>
+
+        <nav id="desktop-nav">
+          <button class="nav-link" onclick="scrollToSection('hero')">
+            Về chúng tôi
+          </button>
+          <button class="nav-link" onclick="scrollToSection('benefits')">
+            Lợi ích
+          </button>
+          <button class="nav-link" onclick="scrollToSection('resources')">
+            Tài liệu
+          </button>
+          <button class="nav-link" onclick="scrollToSection('community')">
+            Cộng đồng
+          </button>
+        </nav>
+
+        <div style="display: flex; gap: 12px; align-items: center">
+          <button class="btn btn-primary btn-sm" onclick="openRegister()">
+            ĐĂNG KÝ NGAY
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            onclick="toggleMenu()"
+            aria-label="Menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#0369a1"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav" id="mobile-nav">
+        <button
+          class="nav-link"
+          onclick="
+            scrollToSection('hero');
+            closeMenu();
+          "
+        >
+          Về chúng tôi
+        </button>
+        <button
+          class="nav-link"
+          onclick="
+            scrollToSection('benefits');
+            closeMenu();
+          "
+        >
+          Lợi ích
+        </button>
+        <button
+          class="nav-link"
+          onclick="
+            scrollToSection('resources');
+            closeMenu();
+          "
+        >
+          Tài liệu
+        </button>
+        <button
+          class="nav-link"
+          onclick="
+            scrollToSection('community');
+            closeMenu();
+          "
+        >
+          Cộng đồng
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left -->
+          <div class="anim-up">
+            <div class="hero-tag">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0369a1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+              <span>English is a dialogue, not a monologue.</span>
+            </div>
+            <h1 class="hero-title">
+              TÌM BẠN HỌC<br />
+              <em>GIAO TIẾP</em> —<br />
+              CHUYỆN NHỎ! 🚀
+            </h1>
+            <p class="hero-desc">
+              Ngôn ngữ là để kết nối. Đừng học một mình. Tìm người bạn đồng hành
+              phù hợp nhất và bắt đầu giao tiếp ngay hôm nay.
+            </p>
+            <div class="hero-btns">
+              <button
+                class="btn btn-primary"
+                onclick="openRegister()"
+                style="font-size: 16px; padding: 16px 36px"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                BẮT ĐẦU TÌM BẠN NGAY
+              </button>
+              <button class="btn btn-outline" onclick="scrollToSection('benefits')">
+                Tìm hiểu thêm
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BENEFITS ===== -->
+    <section id="benefits" class="section section-white">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-pill pill-blue">Tại sao chọn SpeakUp?</span>
+          <h2 class="section-title">Lợi ích khi có bạn đồng hành</h2>
+          <p class="section-sub">
+            Học cùng nhau không chỉ hiệu quả hơn — mà còn vui hơn rất nhiều!
+          </p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #e0f2fe">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0369a1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div class="benefit-title">Phản xạ nhanh</div>
+            <div class="benefit-desc">
+              Phản xạ nhanh, nhạy bén hơn trong giao tiếp. Luyện tập hàng ngày
+              với bạn học giúp não bộ xử lý ngôn ngữ tốc độ cao.
+            </div>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #fef3c7">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#d97706"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <div class="benefit-title">Bớt nhàm chán</div>
+            <div class="benefit-desc">
+              Đừng học một mình, kết bạn làm bớt nhàm chán. Mỗi buổi học là một
+              cuộc trò chuyện thú vị, tràn đầy năng lượng.
+            </div>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #ede9fe">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#7c3aed"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 20h9" />
+                <path
+                  d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                />
+              </svg>
+            </div>
+            <div class="benefit-title">Sửa lỗi ngay</div>
+            <div class="benefit-desc">
+              Bạn lỗi ngay, rèn ngôn ngữ và có bạn đồng hành. Phản hồi tức thì
+              giúp bạn cải thiện nhanh chóng, không lặp lại lỗi.
+            </div>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #dcfce7">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#059669"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="benefit-title">Mở rộng quan hệ</div>
+            <div class="benefit-desc">
+              Sáng học thêm bạn kết bạn, mở rộng mối quan hệ. Network của bạn
+              chính là tài sản, đặc biệt trong môi trường quốc tế.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FIND PARTNER ===== -->
+    <section id="community" class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-pill pill-blue">Cộng đồng</span>
+          <h2 class="section-title">Bạn đang tìm gì? 🔍</h2>
+          <p class="section-sub">
+            Lọc và tìm người bạn đồng hành phù hợp nhất với bạn
+          </p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-bar">
+          <div>
+            <div class="filter-label">Ngôn ngữ</div>
+            <select id="f-lang" onchange="renderProfiles()">
+              <option value="">Tất cả</option>
+              <option>Tiếng Anh</option>
+              <option>Tiếng Nhật</option>
+              <option>Tiếng Hàn</option>
+            </select>
+          </div>
+          <div>
+            <div class="filter-label">Trình độ</div>
+            <select id="f-level" onchange="renderProfiles()">
+              <option value="">Tất cả</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Upper-Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+          <div>
+            <div class="filter-label">Mục tiêu</div>
+            <select id="f-goal" onchange="renderProfiles()">
+              <option value="">Tất cả</option>
+              <option>Giao tiếp</option>
+              <option>IELTS</option>
+              <option>Du lịch</option>
+              <option>Thuyết trình</option>
+            </select>
+          </div>
+          <div>
+            <div class="filter-label">Lịch hẹn</div>
+            <select id="f-time" onchange="renderProfiles()">
+              <option value="">Tất cả</option>
+              <option>Sáng</option>
+              <option>Chiều</option>
+              <option>Tối</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Profiles -->
+        <div class="profiles-grid" id="profiles-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== RESOURCES ===== -->
+    <section id="resources" class="section section-white">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-pill pill-amber">Học vui hơn</span>
+          <h2 class="section-title">Weekly Challenge & Tài liệu 📚</h2>
+          <p class="section-sub">
+            Thử thách hàng tuần và kho tài liệu phong phú giúp bạn tiến bộ nhanh
+            chóng
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          <!-- Challenge -->
+          <div class="challenge-card">
+            <div
+              class="resource-icon"
+              style="background: rgba(255, 255, 255, 0.2)"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                <path d="M4 22h16" />
+                <path
+                  d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+                />
+                <path
+                  d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+                />
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+              </svg>
+            </div>
+            <p
+              style="
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                opacity: 0.8;
+                margin-bottom: 10px;
+              "
+            >
+              This Week's Challenge
+            </p>
+            <h3
+              class="font-jakarta"
+              style="font-weight: 800; font-size: 22px; margin-bottom: 12px"
+            >
+              Talk about your dream career for 2 minutes!
+            </h3>
+            <p
+              style="
+                opacity: 0.85;
+                line-height: 1.65;
+                font-size: 15px;
+                margin-bottom: 28px;
+              "
+            >
+              Mỗi tuần một thử thách nói tiếng Anh mới. Hoàn thành để nhận badge
+              và leo bảng xếp hạng cộng đồng!
+            </p>
+            <button class="btn btn-white" onclick="openRegister()">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              Tham gia Challenge
+            </button>
+            <div class="challenge-stats">
+              <div>
+                <div style="font-weight: 800; font-size: 18px">47</div>
+                <div style="opacity: 0.75; font-size: 12px; font-weight: 600">
+                  Người tham gia
+                </div>
+              </div>
+              <div>
+                <div style="font-weight: 800; font-size: 18px">3 ngày</div>
+                <div style="opacity: 0.75; font-size: 12px; font-weight: 600">
+                  Còn lại
+                </div>
+              </div>
+              <div>
+                <div style="font-weight: 800; font-size: 18px">🏅</div>
+                <div style="opacity: 0.75; font-size: 12px; font-weight: 600">
+                  Giải thưởng
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources -->
+          <div class="resource-card">
+            <div class="resource-icon" style="background: #fef3c7">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#d97706"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </div>
+            <p
+              style="
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: #92400e;
+                margin-bottom: 10px;
+              "
+            >
+              Kho Tài Liệu
+            </p>
+            <h3
+              class="font-jakarta"
+              style="
+                font-weight: 800;
+                font-size: 22px;
+                color: #92400e;
+                margin-bottom: 12px;
+              "
+            >
+              Tài liệu học Speaking chọn lọc
+            </h3>
+            <p
+              style="
+                color: #78350f;
+                line-height: 1.65;
+                font-size: 15px;
+                margin-bottom: 20px;
+              "
+            >
+              Bộ sưu tập tài liệu luyện nói được chọn lọc kỹ lưỡng — từ giao
+              tiếp cơ bản đến IELTS Speaking Band 8.
+            </p>
+            <div class="resource-list">
+              <div class="resource-item">
+                <span style="font-size: 14px; font-weight: 600; color: #78350f"
+                  >📘 IELTS Speaking Topics Bank</span
+                ><span class="badge" style="background: #fef3c7; color: #92400e"
+                  >Premium</span
+                >
+              </div>
+              <div class="resource-item">
+                <span style="font-size: 14px; font-weight: 600; color: #78350f"
+                  >🎙️ Conversation Starters Pack</span
+                ><span class="badge" style="background: #dcfce7; color: #166534"
+                  >Miễn phí</span
+                >
+              </div>
+              <div class="resource-item">
+                <span style="font-size: 14px; font-weight: 600; color: #78350f"
+                  >📝 Common Mistakes &amp; Fixes</span
+                ><span class="badge" style="background: #dcfce7; color: #166534"
+                  >Miễn phí</span
+                >
+              </div>
+              <div class="resource-item">
+                <span style="font-size: 14px; font-weight: 600; color: #78350f"
+                  >🎯 Pronunciation Guide</span
+                ><span class="badge" style="background: #fef3c7; color: #92400e"
+                  >Premium</span
+                >
+              </div>
+            </div>
+            <button class="btn btn-amber" onclick="openRegister()">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Tải Tài Liệu Ngay
+            </button>
+          </div>
+        </div>
+
+        <!-- Mini Game -->
+        <div class="mini-game">
+          <div>
+            <p
+              style="
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: #7c3aed;
+                margin-bottom: 8px;
+              "
+            >
+              Mini Game
+            </p>
+            <h3
+              class="font-jakarta"
+              style="
+                font-weight: 800;
+                font-size: 22px;
+                color: #5b21b6;
+                margin-bottom: 8px;
+              "
+            >
+              Speaking Bingo! 🎲
+            </h3>
+            <p style="color: #6d28d9; font-size: 15px">
+              Hoàn thành thẻ Bingo với 25 tình huống giao tiếp trong 1 tuần.
+              Rinh ngay phần quà hấp dẫn!
+            </p>
+          </div>
+          <button class="btn btn-purple" onclick="openRegister()">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+            Chơi Ngay
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer-section">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
+              "
+            >
+              <img
+                src="logo.png"
+                alt="SpeakUp Logo"
+                style="height: 50px; width: auto; border-radius: 14px"
+              />
+              <span class="footer-logo-text">SPEAK<span>UP</span></span>
+            </div>
+            <p class="footer-desc">
+              Nền tảng kết nối người học tiếng Anh, giúp bạn bứt phá giao tiếp
+              thông qua việc luyện tập cùng nhau.
+            </p>
+            <p class="footer-slogan">
+              "English is a dialogue, not a monologue."
+            </p>
+          </div>
+
+          <!-- Team -->
+          <div>
+            <div class="footer-heading">Đội ngũ phát triển 💙</div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Phạm Thị Yến Vy</span>
+            </div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Trịnh Thị Cẩm Vy</span>
+            </div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Vũ Thảo Vy</span>
+            </div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Vũ Tường Vy</span>
+            </div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Trương Thị Lương Xuân</span>
+            </div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Đặng Thị Hải Yến</span>
+            </div>
+            <div class="team-item">
+              <div class="team-dot"></div>
+              <span class="team-name">Lưu Hải Yến</span>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <div class="footer-heading">Liên hệ chúng tôi 📬</div>
+            <div class="contact-form" id="contact-form">
+              <input
+                class="footer-input"
+                id="c-name"
+                type="text"
+                placeholder="Họ và tên"
+              />
+              <input
+                class="footer-input"
+                id="c-email"
+                type="text"
+                placeholder="Email"
+              />
+              <textarea
+                class="footer-textarea"
+                id="c-msg"
+                placeholder="Tin nhắn..."
+              ></textarea>
+              <button class="btn btn-primary btn-full" onclick="sendContact()">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+                Gửi tin nhắn
+              </button>
+            </div>
+            <div class="contact-success" id="contact-success">
+              <div style="font-size: 36px; margin-bottom: 12px">✅</div>
+              <p style="color: #7dd3fc; font-weight: 700">
+                Cảm ơn bạn! Chúng tôi sẽ phản hồi sớm nhất.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            © 2024 SpeakUp — Cộng đồng Học Giao Tiếp. Made with ❤️ by the
+            SpeakUp Team.
+          </p>
+          <div class="footer-links">
+            <button class="footer-link">Điều khoản</button>
+            <button class="footer-link">Bảo mật</button>
+            <button class="footer-link">Hỗ trợ</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== REGISTER MODAL ===== -->
+    <div
+      class="modal-overlay"
+      id="register-modal"
+      onclick="closeOnOverlay(event, 'register-modal')"
+    >
+      <div class="modal-box">
+        <!-- Form -->
+        <div id="reg-form-view">
+          <div class="modal-header">
+            <div>
+              <div class="modal-tag">SpeakUp Community</div>
+              <div class="modal-title">Find Your Speaking Partner ✨</div>
+            </div>
+            <button class="modal-close" onclick="closeRegister()">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0369a1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <div class="form-body">
+            <div class="form-row">
+              <div>
+                <label class="field-label">Họ và tên *</label>
+                <input
+                  class="field-input"
+                  id="r-name"
+                  type="text"
+                  placeholder="Nguyễn Văn A"
+                  oninput="clearErr('r-name')"
+                />
+                <div class="field-error" id="err-name">
+                  ⚠ Vui lòng nhập họ và tên
+                </div>
+              </div>
+              <div>
+                <label class="field-label">Email *</label>
+                <input
+                  class="field-input"
+                  id="r-email"
+                  type="text"
+                  placeholder="abc@gmail.com"
+                  oninput="clearErr('r-email')"
+                />
+                <div class="field-error" id="err-email">
+                  ⚠ Email không hợp lệ
+                </div>
+              </div>
+              <div>
+                <label class="field-label">Số điện thoại</label>
+                <input
+                  class="field-input"
+                  id="r-phone"
+                  type="text"
+                  placeholder="0xxxxxxxxx"
+                />
+              </div>
+              <div>
+                <label class="field-label">Link liên hệ</label>
+                <input
+                  class="field-input"
+                  id="r-link"
+                  type="text"
+                  placeholder="Facebook / Zalo..."
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="field-label">Bạn là</label>
+              <div class="toggle-group" id="who-group">
+                <button
+                  class="toggle-btn"
+                  onclick="selectRadio('who-group', this)"
+                >
+                  <span class="toggle-check radio"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  SV ULIS
+                </button>
+                <button
+                  class="toggle-btn"
+                  onclick="selectRadio('who-group', this)"
+                >
+                  <span class="toggle-check radio"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Sinh viên khác
+                </button>
+                <button
+                  class="toggle-btn"
+                  onclick="selectRadio('who-group', this)"
+                >
+                  <span class="toggle-check radio"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Người đi làm
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label class="field-label">Trình độ hiện tại</label>
+              <select id="r-level">
+                <option value="">-- Chọn trình độ --</option>
+                <option>Beginner (A1–A2)</option>
+                <option>Elementary (A2–B1)</option>
+                <option>Intermediate (B1)</option>
+                <option>Upper-Intermediate (B2)</option>
+                <option>Advanced (C1+)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="field-label">Mục tiêu luyện tập</label>
+              <div class="toggle-group">
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Giao tiếp hàng ngày
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Luyện IELTS/TOEIC
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Thuyết trình
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Du lịch
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Phát âm
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Business English
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label class="field-label">Thời gian rảnh</label>
+              <div class="toggle-group">
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Sáng (6–12h)
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Chiều (12–18h)
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Tối (18–23h)
+                </button>
+                <button class="toggle-btn" onclick="toggleCheck(this)">
+                  <span class="toggle-check"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Cuối tuần
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label class="field-label">Cam kết tham gia đầy đủ</label>
+              <div class="toggle-group" id="commit-group">
+                <button
+                  class="toggle-btn"
+                  onclick="selectRadio('commit-group', this)"
+                >
+                  <span class="toggle-check radio"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Có, tôi cam kết!
+                </button>
+                <button
+                  class="toggle-btn"
+                  onclick="selectRadio('commit-group', this)"
+                >
+                  <span class="toggle-check radio"
+                    ><span class="toggle-dot"></span
+                  ></span>
+                  Tôi sẽ cố gắng
+                </button>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-primary btn-full"
+              style="font-size: 16px; padding: 16px"
+              onclick="submitRegister()"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              Gửi Đăng Ký Ngay
+            </button>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div id="reg-success-view" style="display: none">
+          <div class="modal-success">
+            <div class="success-icon">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="success-title">Đăng ký thành công! 🎉</div>
+            <p class="success-desc">
+              Chúng tôi sẽ kết nối bạn với người đồng hành phù hợp nhất trong
+              vòng 24 giờ!
+            </p>
+            <button class="btn btn-primary" onclick="closeRegister()">
+              Tuyệt vời, đóng lại
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FEEDBACK MODAL ===== -->
+    <div
+      class="modal-overlay"
+      id="feedback-modal"
+      onclick="closeOnOverlay(event, 'feedback-modal')"
+    >
+      <div class="modal-box sm">
+        <div class="modal-header">
+          <div class="modal-title">Góp ý cho SpeakUp 💬</div>
+          <button class="modal-close" onclick="closeFeedback()">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#0369a1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="feedback-form" id="feedback-form-view">
+          <p style="color: #64748b; margin-bottom: 20px; font-size: 15px">
+            Trải nghiệm của bạn với SpeakUp thế nào?
+          </p>
+          <div class="stars" id="stars">
+            <button
+              class="star-btn"
+              data-val="1"
+              onmouseover="hoverStar(1)"
+              onmouseout="unhoverStar()"
+              onclick="rateStar(1)"
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cbd5e1"
+                stroke-width="1.5"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </button>
+            <button
+              class="star-btn"
+              data-val="2"
+              onmouseover="hoverStar(2)"
+              onmouseout="unhoverStar()"
+              onclick="rateStar(2)"
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cbd5e1"
+                stroke-width="1.5"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </button>
+            <button
+              class="star-btn"
+              data-val="3"
+              onmouseover="hoverStar(3)"
+              onmouseout="unhoverStar()"
+              onclick="rateStar(3)"
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cbd5e1"
+                stroke-width="1.5"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </button>
+            <button
+              class="star-btn"
+              data-val="4"
+              onmouseover="hoverStar(4)"
+              onmouseout="unhoverStar()"
+              onclick="rateStar(4)"
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cbd5e1"
+                stroke-width="1.5"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </button>
+            <button
+              class="star-btn"
+              data-val="5"
+              onmouseover="hoverStar(5)"
+              onmouseout="unhoverStar()"
+              onclick="rateStar(5)"
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cbd5e1"
+                stroke-width="1.5"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="star-label" id="star-label"></div>
+          <textarea
+            class="field-input"
+            id="feedback-msg"
+            rows="4"
+            placeholder="Chia sẻ thêm ý kiến của bạn..."
+            style="resize: vertical; margin-bottom: 16px"
+          ></textarea>
+          <button
+            class="btn btn-primary btn-full"
+            id="submit-feedback"
+            onclick="submitFeedback()"
+            disabled
+            style="opacity: 0.5; cursor: not-allowed"
+          >
+            Gửi Phản Hồi
+          </button>
+        </div>
+
+        <div class="feedback-success" id="feedback-success">
+          <div style="font-size: 48px; margin-bottom: 16px">🙏</div>
+          <h3
+            class="font-jakarta"
+            style="
+              font-weight: 800;
+              font-size: 22px;
+              color: #075985;
+              margin-bottom: 10px;
+            "
+          >
+            Cảm ơn bạn!
+          </h3>
+          <p style="color: #64748b; margin-bottom: 24px">
+            Phản hồi của bạn giúp SpeakUp ngày càng tốt hơn.
+          </p>
+          <button class="btn btn-primary" onclick="closeFeedback()">
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FLOATING BUTTON ===== -->
+    <button id="feedback-btn" onclick="openFeedback()">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+        />
+      </svg>
+      Feedback
+    </button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="script.js"></script>
+  </body>
+</html>
