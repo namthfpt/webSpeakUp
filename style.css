@@ -1,4 +1,4 @@
-﻿      /* ===== RESET & BASE ===== */
+      /* ===== RESET & BASE ===== */
       *,
       *::before,
       *::after {
@@ -247,24 +247,42 @@
       }
       .nav-link {
         color: var(--blue-700);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 15px;
         text-decoration: none;
-        padding-bottom: 4px;
-        border-bottom: 2px solid transparent;
+        padding: 8px 12px;
+        border: none;
         cursor: pointer;
         background: none;
-        border-top: none;
-        border-left: none;
-        border-right: none;
         font-family: "Nunito", sans-serif;
-        transition:
-          color 0.2s,
-          border-color 0.2s;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2.5px;
+        background: var(--blue-500);
+        transition: width 0.3s ease, background-color 0.3s ease;
+        border-radius: 2px;
       }
       .nav-link:hover {
+        color: var(--blue-400);
+      }
+      .nav-link:hover::after {
+        width: 80%;
+        background: var(--blue-400);
+      }
+      .nav-link.active {
         color: var(--blue-500);
-        border-bottom-color: var(--blue-500);
+      }
+      .nav-link.active::after {
+        width: 80%;
+        background: var(--blue-500);
       }
       .hamburger {
         display: none;
@@ -556,16 +574,21 @@
       }
       select {
         font-family: "Nunito", sans-serif;
-        border: 2px solid var(--blue-200);
-        border-radius: var(--radius-sm);
-        padding: 10px 14px;
-        font-size: 14px;
-        color: #0c4a6e;
+        border: 1.5px solid var(--blue-200);
+        border-radius: 8px;
+        padding: 10px 36px 10px 14px;
+        font-size: 14.5px;
+        color: var(--blue-800);
+        font-weight: 600;
         background: white;
         outline: none;
-        transition: border-color 0.2s;
+        transition: all 0.2s;
         width: 100%;
         cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230369a1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7 15 5 5 5-5'/%3E%3Cpath d='m7 9 5-5 5 5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
       }
       select:focus {
         border-color: var(--blue-500);
