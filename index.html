@@ -122,7 +122,7 @@
         
         <!-- Right: 3D Illustration -->
         <div class="hero-illustration">
-          <img src="hero-3d.png" alt="3D Talking Character" style="width: 100%; max-width: 480px; display: block; margin: 0 auto; filter: drop-shadow(0 20px 40px rgba(14,165,233,0.2)); border-radius: 30px; object-fit: cover;" />
+          <img src="speakup.png" alt="3D Talking Character" style="width: 100%; max-width: 480px; display: block; margin: 0 auto; filter: drop-shadow(0 20px 40px rgba(14,165,233,0.2)); border-radius: 30px; object-fit: cover;" />
         </div>
       </div>
     </div>
@@ -563,26 +563,28 @@
           </button>
         </div>
       </div>
+    </div>
 
-      <!-- Success -->
-      <div id="reg-success-view" style="display: none">
-        <div class="modal-success">
-          <div class="success-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-          </div>
-          <div class="success-title">Đăng ký thành công! 🎉</div>
-          <p class="success-desc">
-            Chúng tôi sẽ kết nối bạn với người đồng hành phù hợp nhất trong
-            vòng 24 giờ!
-          </p>
-          <button class="btn btn-primary" onclick="closeRegister()">
-            Tuyệt vời, đóng lại
-          </button>
-        </div>
-      </div>
+<div id="reg-success-view" style="display: none">
+  <div class="modal-success" style="padding: 32px; text-align: center;">
+    <div class="success-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </div>
+    <div class="success-title" style="color: #1a73e8; font-size: 20px; font-weight: 700; margin: 16px 0 8px;">
+      Đăng ký thành công! 🎉
+    </div>
+    <p class="success-desc" style="color: #444; margin-bottom: 24px;">
+      Chúng tôi sẽ kết nối bạn với người đồng hành phù hợp nhất trong
+      vòng 24 giờ!
+    </p>
+    <button class="btn btn-primary" onclick="closeRegister()">
+      Tuyệt vời, đóng lại
+    </button>
+  </div>
+</div>
     </div>
   </div>
 
