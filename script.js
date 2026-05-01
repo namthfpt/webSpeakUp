@@ -242,8 +242,7 @@ async function submitRegister() {
   }
   if (!valid) return;
 
-  // Thay URL Web App của Google Apps Script vào đây!
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzDajwAAbuSxbw8d5JUqWwJV0W2mfuPRzN523Q1kPODOUd_0aft55EPO8oboKyaBR770A/exec";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbygs30g54X4bB2pVF1YB2vnSQS1m7hCqer17dx6Tz-MMTG1YtUPas7Qy3QBa8ZqJE-uuQ/exec";
 
   const formData = new FormData();
   formData.append("name", name);
@@ -270,13 +269,15 @@ async function submitRegister() {
       return;
     }
 
-    const response = await fetch(scriptURL, { method: "POST", body: formData });
-    if (response.ok) {
-      document.getElementById("reg-form-view").style.display = "none";
-      document.getElementById("reg-success-view").style.display = "block";
-    } else {
-      alert("Có lỗi xảy ra khi gửi dữ liệu. Vui lòng thử lại!");
-    }
+    await fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors"
+    });
+
+    // Luôn hiển thị thành công vì no-cors không trả về status
+    document.getElementById("reg-form-view").style.display = "none";
+    document.getElementById("reg-success-view").style.display = "block";
   } catch (error) {
     console.error("Error!", error.message);
     alert("Không thể kết nối. Vui lòng thử lại!");
