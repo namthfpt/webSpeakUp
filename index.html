@@ -32,10 +32,10 @@
         </a>
 
         <nav id="desktop-nav">
-          <button class="nav-link" onclick="scrollToSection('hero')">
+          <button class="nav-link" onclick="scrollToSection('about-us')">
             Về chúng tôi
           </button>
-          <button class="nav-link" onclick="scrollToSection('benefits')">
+          <button class="nav-link" onclick="scrollToSection('project-goals')">
             Lợi ích
           </button>
           <button class="nav-link" onclick="scrollToSection('community')">
@@ -43,6 +43,9 @@
           </button>
           <button class="nav-link" onclick="scrollToSection('resources')">
             Tài liệu
+          </button>
+          <button class="nav-link" onclick="scrollToSection('testimonials')">
+            Feedback
           </button>
         </nav>
 
@@ -76,7 +79,7 @@
         <button
           class="nav-link"
           onclick="
-            scrollToSection('hero');
+            scrollToSection('about-us');
             closeMenu();
           "
         >
@@ -85,7 +88,7 @@
         <button
           class="nav-link"
           onclick="
-            scrollToSection('benefits');
+            scrollToSection('project-goals');
             closeMenu();
           "
         >
@@ -108,6 +111,15 @@
           "
         >
           Tài liệu
+        </button>
+        <button
+          class="nav-link"
+          onclick="
+            scrollToSection('testimonials');
+            closeMenu();
+          "
+        >
+          Feedback
         </button>
       </div>
     </header>
@@ -229,26 +241,51 @@
     </section>
 
     <!-- ===== INTRO ===== -->
-    <section id="benefits" class="section section-white">
+    <section id="about-us" class="section section-white">
       <div class="container">
         <div class="text-center">
           <span class="section-pill pill-blue">Về chúng tôi</span>
           <h2 class="section-title">Giới thiệu dự án</h2>
           <div class="intro-box scroll-fade-up">
             <div class="intro-quote-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="color: #bae6fd;"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                style="color: #bae6fd"
+              >
+                <path
+                  d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+                />
+              </svg>
             </div>
             <p class="intro-paragraph">
-              <span class="highlight-text">Xin chào các bạn, chúng tôi – nhóm sinh viên Trường Đại học Ngoại ngữ – ĐHQGHN,</span> nhận thấy rằng nhiều sinh viên còn thiếu môi trường để luyện tập kỹ năng nói, dẫn đến sự thiếu tự tin khi giao tiếp.
+              <span class="highlight-text"
+                >Xin chào các bạn, chúng tôi – nhóm sinh viên Trường Đại học
+                Ngoại ngữ – ĐHQGHN,</span
+              >
+              nhận thấy rằng nhiều sinh viên còn thiếu môi trường để luyện tập
+              kỹ năng nói, dẫn đến sự thiếu tự tin khi giao tiếp.
             </p>
             <p class="intro-paragraph">
-              Xuất phát từ thực tế đó, chúng tôi xây dựng dự án <strong style="color: #0f172a;">"SpeakUp – Together We speak"</strong>, một nền tảng giúp người học tìm kiếm partner luyện speaking phù hợp theo trình độ và thời gian. Không chỉ kết nối, SpeakUp còn hỗ trợ chủ đề luyện nói và định hướng học tập, giúp việc rèn luyện trở nên hiệu quả và dễ duy trì hơn.
+              Xuất phát từ thực tế đó, chúng tôi xây dựng dự án
+              <strong style="color: #0f172a"
+                >"SpeakUp – Together We speak"</strong
+              >, một nền tảng giúp người học tìm kiếm partner luyện speaking phù
+              hợp theo trình độ và thời gian. Không chỉ kết nối, SpeakUp còn hỗ
+              trợ chủ đề luyện nói và định hướng học tập, giúp việc rèn luyện
+              trở nên hiệu quả và dễ duy trì hơn.
             </p>
             <div class="intro-quote-block">
               "English is a dialogue, not a monologue"
             </div>
-            <p class="intro-paragraph" style="text-align: center; margin-bottom: 0;">
-              Chúng tôi mong muốn tạo ra một cộng đồng học tập tích cực, nơi mỗi người có thể tự tin sử dụng ngoại ngữ trong thực tế.
+            <p
+              class="intro-paragraph"
+              style="text-align: center; margin-bottom: 0"
+            >
+              Chúng tôi mong muốn tạo ra một cộng đồng học tập tích cực, nơi mỗi
+              người có thể tự tin sử dụng ngoại ngữ trong thực tế.
             </p>
           </div>
         </div>
@@ -300,6 +337,63 @@
             <div class="benefit-desc">
               Những người có nhu cầu nâng cao kỹ năng speaking nhưng gặp khó
               khăn trong việc tìm kiếm môi trường luyện tập phù hợp.
+            </div>
+          </div>
+        </div>
+
+        <div id="project-goals" class="text-center scroll-fade-up" style="margin-top: 60px;">
+          <h3 class="section-title" style="font-size: 28px;">Lợi ích & Mục tiêu</h3>
+        </div>
+        <div class="benefits-grid scroll-fade-up" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px;">
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #e0f2fe">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="benefit-title">Tăng tần suất luyện tập</div>
+            <div class="benefit-desc">
+              Tăng ít nhất 30% tần suất luyện nói ngoại ngữ của sinh viên mỗi tuần.
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #dcfce7">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="benefit-title">Cải thiện sự tự tin</div>
+            <div class="benefit-desc">
+              Cải thiện sự tự tin khi giao tiếp cho sinh viên (đặc biệt trong các tình huống thực tế và học thuật).
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #fef3c7">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="benefit-title">Kết nối mạng lưới Partner</div>
+            <div class="benefit-desc">
+              Kết nối được mạng lưới partner luyện nói ổn định cho sinh viên trong và ngoài trường.
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon" style="background: #f3e8ff">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7e22ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <div class="benefit-title">Thúc đẩy thói quen tự học</div>
+            <div class="benefit-desc">
+              Thúc đẩy thói quen tự học và ứng dụng các nền tảng online trong việc rèn luyện kỹ năng ngôn ngữ.
             </div>
           </div>
         </div>
@@ -801,6 +895,110 @@
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
             Chơi Ngay
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Feedback</h2>
+        </div>
+
+        <div class="testimonials-slider-container">
+          <div class="testimonials-grid" id="testimonials-grid">
+          <div class="testimonial-card scroll-fade-up">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="avt1.jpg" alt="Tố Hoài" />
+              </div>
+              <div>
+                <h4 class="testimonial-name">Trịnh Thị Tố Hoài</h4>
+                <p class="testimonial-role">Sinh viên năm 1 ULIS</p>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Trước đây mình khá ngại nói vì không có người luyện cùng. Nhờ
+              SpeakUp, mình được ghép partner phù hợp và có chủ đề rõ ràng để
+              luyện tập. Sau một thời gian, mình thấy tự tin và phản xạ tốt hơn
+              khi giao tiếp."
+            </p>
+          </div>
+
+          <div
+            class="testimonial-card scroll-fade-up"
+            style="transition-delay: 0.1s"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="avt2.jpg" alt="Phương Anh" />
+              </div>
+              <div>
+                <h4 class="testimonial-name">Hồ Thị Phương Anh</h4>
+                <p class="testimonial-role">Sinh viên năm 2 ULIS</p>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Mình thích SpeakUp vì dễ tìm người cùng trình độ và sắp xếp thời
+              gian linh hoạt. Việc luyện nói trở nên đều đặn hơn thay vì ngẫu
+              hứng như trước. Nhờ đó, mình thấy kỹ năng speaking cải thiện rõ
+              rệt."
+            </p>
+          </div>
+
+          <div
+            class="testimonial-card scroll-fade-up"
+            style="transition-delay: 0.2s"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="avt3.jpg" alt="Thu Hà" />
+              </div>
+              <div>
+                <h4 class="testimonial-name">Lê Thu Hà</h4>
+                <p class="testimonial-role">Người học tự do</p>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "SpeakUp giúp mình có môi trường luyện nói ổn định và dễ duy trì.
+              Các chủ đề gợi ý rất hữu ích, không còn bị bí ý khi nói. Mình cảm
+              thấy tự tin hơn khi sử dụng tiếng Anh trong giao tiếp hàng ngày."
+            </p>
+          </div>
+
+          <div
+            class="testimonial-card scroll-fade-up"
+            style="transition-delay: 0.3s"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="avt4.jpg" alt="Như Ngọc" />
+              </div>
+              <div>
+                <h4 class="testimonial-name">Phạm Nguyễn Như Ngọc</h4>
+                <p class="testimonial-role">Sinh viên năm 3 ULIS</p>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Mình ấn tượng với cách SpeakUp tạo động lực học tập, không còn
+              cảm giác học một mình. Các buổi luyện nói trở nên thú vị hơn nhờ
+              có định hướng và tương tác hai chiều. Nhờ đó, mình chủ động hơn và
+              không còn ngại khi bắt đầu hội thoại."
+            </p>
+          </div>
+          </div>
+
+          <button class="slider-nav slider-prev" onclick="scrollTestimonials(-1)" style="left: -20px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="slider-nav slider-next" onclick="scrollTestimonials(1)" style="right: -20px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
           </button>
         </div>
       </div>
