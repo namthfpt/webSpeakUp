@@ -108,7 +108,40 @@ window.addEventListener("scroll", () => {
 });
 
 function scrollToSection(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav && mobileNav.classList.contains('open')) {
+    closeMenu();
+    // Chờ menu đóng hẳn (để layout trang ổn định) rồi mới cuộn
+    setTimeout(() => {
+      const target = document.getElementById(id);
+      if (target) {
+        const offset = 80; // Độ cao header
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = target.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 300);
+  } else {
+    const target = document.getElementById(id);
+    if (target) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = target.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 }
 
 // ===== MOBILE MENU =====
@@ -117,6 +150,36 @@ function toggleMenu() {
 }
 function closeMenu() {
   document.getElementById("mobile-nav").classList.remove("open");
+}
+
+let feedbackInterval;
+function startFeedbackSlider() {
+  feedbackInterval = setInterval(() => {
+    scrollTestimonials(1);
+  }, 5000);
+}
+
+function scrollTestimonials(dir) {
+  const grid = document.getElementById('testimonials-grid');
+  if (!grid) return;
+  const cards = grid.querySelectorAll('.testimonial-card');
+  if (!cards.length) return;
+  
+  const step = cards[0].offsetWidth + 30; // Card width + gap
+  const maxScroll = grid.scrollWidth - grid.clientWidth;
+  
+  // Logic xoay vòng (infinite loop soft)
+  if (dir === 1 && grid.scrollLeft >= maxScroll - 10) {
+    grid.scrollTo({ left: 0, behavior: 'smooth' });
+  } else if (dir === -1 && grid.scrollLeft <= 10) {
+    grid.scrollTo({ left: maxScroll, behavior: 'smooth' });
+  } else {
+    grid.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+
+  // Reset timer khi người dùng bấm nút
+  clearInterval(feedbackInterval);
+  startFeedbackSlider();
 }
 
 // ===== PROFILES =====
@@ -476,6 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   startSlider();
   startVidSlider();
+  startFeedbackSlider();
 });
 
 // ===== VIDEO PLAYER =====
