@@ -280,13 +280,23 @@
           </div>
         </div>
 
-        <div class="text-center scroll-fade-up" style="margin-top: 60px; margin-bottom: 40px;">
-          <h3 class="section-title" style="font-size: 28px;">Đối tượng hướng đến</h3>
+        <div
+          class="text-center scroll-fade-up"
+          style="margin-top: 60px; margin-bottom: 40px"
+        >
+          <h3 class="section-title" style="font-size: 28px">
+            Đối tượng hướng đến
+          </h3>
         </div>
 
         <div
-          class="benefits-grid"
-          style="grid-template-columns: 1fr 1fr; gap: 30px"
+          class="benefits-grid grid-2-col scroll-fade-up"
+          style="
+            gap: 30px;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+          "
         >
           <div class="benefit-card">
             <div class="benefit-icon" style="background: #e0f2fe">
@@ -335,60 +345,293 @@
           </div>
         </div>
 
-        <div id="project-goals" class="text-center scroll-fade-up" style="margin-top: 60px;">
-          <h3 class="section-title" style="font-size: 28px;">Lợi ích & Mục tiêu</h3>
+        <div
+          id="project-benefits"
+          class="text-center scroll-fade-up"
+          style="margin-top: 80px"
+        >
+          <div class="pill-header">LỢI ÍCH KHI THAM GIA</div>
         </div>
-        <div class="benefits-grid scroll-fade-up" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px;">
+
+        <div class="benefits-slider-container scroll-fade-up">
+          <div
+            class="overlapping-grid"
+            id="benefits-slider-grid"
+            style="overflow-x: hidden; scroll-behavior: smooth"
+          >
+            <!-- Benefit 1 -->
+            <div class="overlapping-card">
+              <div class="overlapping-img">
+                <img src="loiich1.jpg" alt="Chủ động luyện tập" />
+              </div>
+              <div class="overlapping-text">
+                <p>
+                  Chủ động tham gia các hoạt động luyện nói định kỳ thay vì học
+                  thụ động.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="overlapping-card">
+              <div class="overlapping-img">
+                <img src="loiich2.jpg" alt="Cải thiện phản xạ" />
+              </div>
+              <div class="overlapping-text">
+                <p>
+                  Cải thiện rõ rệt khả năng phản xạ và sự tự tin khi giao tiếp
+                  thực tế.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="overlapping-card">
+              <div class="overlapping-img">
+                <img src="loiich3.jpg" alt="Học tập hợp tác" />
+              </div>
+              <div class="overlapping-text">
+                <p>
+                  Hình thành thói quen học tập hợp tác ( peer-learning ) và duy
+                  trì lâu dài.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="overlapping-card">
+              <div class="overlapping-img">
+                <img src="loiich4.jpg" alt="Mạng lưới Partner" />
+              </div>
+              <div class="overlapping-text">
+                <p>
+                  Xây dựng được mạng lưới partner ổn định để tiếp tục luyện tập
+                  sau dự án.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="slider-nav slider-prev"
+            onclick="scrollBenefits(-1)"
+            style="left: -20px"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button
+            class="slider-nav slider-next"
+            onclick="scrollBenefits(1)"
+            style="right: -20px"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="project-goals"
+          class="text-center scroll-fade-up"
+          style="margin-top: 60px"
+        >
+          <h3 class="section-title" style="font-size: 28px">Mục tiêu</h3>
+        </div>
+        <div
+          class="benefits-grid scroll-fade-up"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+          "
+        >
           <div class="benefit-card">
             <div class="benefit-icon" style="background: #e0f2fe">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0369a1"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
-            <div class="benefit-title">Tăng tần suất luyện tập</div>
+            <div class="benefit-title">Tần suất luyện tập</div>
             <div class="benefit-desc">
-              Tăng ít nhất 30% tần suất luyện nói ngoại ngữ của sinh viên mỗi tuần.
+              Tăng ít nhất 30% tần suất luyện nói ngoại ngữ của sinh viên mỗi
+              tuần.
             </div>
           </div>
 
           <div class="benefit-card">
             <div class="benefit-icon" style="background: #dcfce7">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#166534"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
             <div class="benefit-title">Cải thiện sự tự tin</div>
             <div class="benefit-desc">
-              Cải thiện sự tự tin khi giao tiếp cho sinh viên (đặc biệt trong các tình huống thực tế và học thuật).
+              Cải thiện sự tự tin khi giao tiếp cho sinh viên (đặc biệt trong
+              các tình huống thực tế và học thuật).
             </div>
           </div>
 
           <div class="benefit-card">
             <div class="benefit-icon" style="background: #fef3c7">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#d97706"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </div>
-            <div class="benefit-title">Kết nối mạng lưới Partner</div>
+            <div class="benefit-title">Kết nối Partner</div>
             <div class="benefit-desc">
-              Kết nối được mạng lưới partner luyện nói ổn định cho sinh viên trong và ngoài trường.
+              Kết nối được mạng lưới partner luyện nói ổn định cho sinh viên
+              trong và ngoài trường.
             </div>
           </div>
 
           <div class="benefit-card">
             <div class="benefit-icon" style="background: #f3e8ff">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7e22ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#7e22ce"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
             </div>
-            <div class="benefit-title">Thúc đẩy thói quen tự học</div>
+            <div class="benefit-title">Thói quen tự học</div>
             <div class="benefit-desc">
-              Thúc đẩy thói quen tự học và ứng dụng các nền tảng online trong việc rèn luyện kỹ năng ngôn ngữ.
+              Thúc đẩy thói quen tự học và ứng dụng các nền tảng online trong
+              việc rèn luyện kỹ năng ngôn ngữ.
             </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 60px">
+          <h3 class="section-title" style="font-size: 28px">Video thực tế</h3>
+        </div>
+        <!-- Videos Slider Moved from Media Showcase -->
+        <div
+          class="media-video-slider-container scroll-fade-up"
+          style="margin-top: 32px"
+        >
+          <div class="media-video-slide active" onclick="toggleVideo(this)">
+            <video src="vid1.mp4" playsinline controls class="video-thumbnail"></video>
+            <div class="video-duration">02:15</div>
+          </div>
+          <div class="media-video-slide" onclick="toggleVideo(this)">
+            <video src="vid2.mp4" playsinline controls class="video-thumbnail"></video>
+            <div class="video-duration">01:45</div>
+          </div>
+          <!-- Navigation Buttons -->
+          <button
+            class="slider-nav slider-prev"
+            onclick="
+              changeVidSlide(-1);
+              event.stopPropagation();
+            "
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button
+            class="slider-nav slider-next"
+            onclick="
+              changeVidSlide(1);
+              event.stopPropagation();
+            "
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <!-- Indicators -->
+          <div class="slider-indicators">
+            <span
+              class="vid-indicator active"
+              onclick="
+                goToVidSlide(0);
+                event.stopPropagation();
+              "
+            ></span>
+            <span
+              class="vid-indicator"
+              onclick="
+                goToVidSlide(1);
+                event.stopPropagation();
+              "
+            ></span>
           </div>
         </div>
       </div>
@@ -416,6 +659,12 @@
           </div>
           <div class="media-slide" onclick="openLightbox(2)">
             <img src="anh3.jpg" alt="SpeakUp Interface 3" />
+          </div>
+          <div class="media-slide" onclick="openLightbox(3)">
+            <img src="anh1.jpg" alt="SpeakUp Interface 4" />
+          </div>
+          <div class="media-slide" onclick="openLightbox(4)">
+            <img src="anh2.jpg" alt="SpeakUp Interface 5" />
           </div>
           <!-- Navigation Buttons -->
           <button
@@ -481,104 +730,17 @@
                 event.stopPropagation();
               "
             ></span>
-          </div>
-        </div>
-
-        <!-- Videos Slider -->
-        <div
-          class="media-video-slider-container scroll-fade-up"
-          style="margin-top: 32px"
-        >
-          <div class="media-video-slide active" onclick="toggleVideo(this)">
-            <video src="vid1.mp4" playsinline class="video-thumbnail"></video>
-            <div class="play-btn">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="white"
-                stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-            </div>
-            <div class="video-duration">02:15</div>
-          </div>
-          <div class="media-video-slide" onclick="toggleVideo(this)">
-            <video src="vid1.mp4" playsinline class="video-thumbnail"></video>
-            <div class="play-btn">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="white"
-                stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-            </div>
-            <div class="video-duration">01:45</div>
-          </div>
-          <!-- Navigation Buttons -->
-          <button
-            class="slider-nav slider-prev"
-            onclick="
-              changeVidSlide(-1);
-              event.stopPropagation();
-            "
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button
-            class="slider-nav slider-next"
-            onclick="
-              changeVidSlide(1);
-              event.stopPropagation();
-            "
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-          <!-- Indicators -->
-          <div class="slider-indicators">
             <span
-              class="vid-indicator active"
+              class="indicator"
               onclick="
-                goToVidSlide(0);
+                goToSlide(3);
                 event.stopPropagation();
               "
             ></span>
             <span
-              class="vid-indicator"
+              class="indicator"
               onclick="
-                goToVidSlide(1);
+                goToSlide(4);
                 event.stopPropagation();
               "
             ></span>
@@ -903,94 +1065,121 @@
 
         <div class="testimonials-slider-container">
           <div class="testimonials-grid" id="testimonials-grid">
-          <div class="testimonial-card scroll-fade-up">
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <img src="avt1.jpg" alt="Tố Hoài" />
+            <div class="testimonial-card scroll-fade-up">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img src="avt1.jpg" alt="Tố Hoài" />
+                </div>
+                <div>
+                  <h4 class="testimonial-name">Trịnh Thị Tố Hoài</h4>
+                  <p class="testimonial-role">Sinh viên năm 1 ULIS</p>
+                </div>
               </div>
-              <div>
-                <h4 class="testimonial-name">Trịnh Thị Tố Hoài</h4>
-                <p class="testimonial-role">Sinh viên năm 1 ULIS</p>
-              </div>
+              <p class="testimonial-text">
+                "Trước đây mình khá ngại nói vì không có người luyện cùng. Nhờ
+                SpeakUp, mình được ghép partner phù hợp và có chủ đề rõ ràng để
+                luyện tập. Sau một thời gian, mình thấy tự tin và phản xạ tốt
+                hơn khi giao tiếp."
+              </p>
             </div>
-            <p class="testimonial-text">
-              "Trước đây mình khá ngại nói vì không có người luyện cùng. Nhờ
-              SpeakUp, mình được ghép partner phù hợp và có chủ đề rõ ràng để
-              luyện tập. Sau một thời gian, mình thấy tự tin và phản xạ tốt hơn
-              khi giao tiếp."
-            </p>
+
+            <div
+              class="testimonial-card scroll-fade-up"
+              style="transition-delay: 0.1s"
+            >
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img src="avt2.jpg" alt="Phương Anh" />
+                </div>
+                <div>
+                  <h4 class="testimonial-name">Hồ Thị Phương Anh</h4>
+                  <p class="testimonial-role">Sinh viên năm 2 ULIS</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Mình thích SpeakUp vì dễ tìm người cùng trình độ và sắp xếp
+                thời gian linh hoạt. Việc luyện nói trở nên đều đặn hơn thay vì
+                ngẫu hứng như trước. Nhờ đó, mình thấy kỹ năng speaking cải
+                thiện rõ rệt."
+              </p>
+            </div>
+
+            <div
+              class="testimonial-card scroll-fade-up"
+              style="transition-delay: 0.2s"
+            >
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img src="avt3.jpg" alt="Thu Hà" />
+                </div>
+                <div>
+                  <h4 class="testimonial-name">Lê Thu Hà</h4>
+                  <p class="testimonial-role">Người học tự do</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "SpeakUp giúp mình có môi trường luyện nói ổn định và dễ duy
+                trì. Các chủ đề gợi ý rất hữu ích, không còn bị bí ý khi nói.
+                Mình cảm thấy tự tin hơn khi sử dụng tiếng Anh trong giao tiếp
+                hàng ngày."
+              </p>
+            </div>
+
+            <div
+              class="testimonial-card scroll-fade-up"
+              style="transition-delay: 0.3s"
+            >
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img src="avt4.jpg" alt="Như Ngọc" />
+                </div>
+                <div>
+                  <h4 class="testimonial-name">Phạm Nguyễn Như Ngọc</h4>
+                  <p class="testimonial-role">Sinh viên năm 3 ULIS</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Mình ấn tượng với cách SpeakUp tạo động lực học tập, không còn
+                cảm giác học một mình. Các buổi luyện nói trở nên thú vị hơn nhờ
+                có định hướng và tương tác hai chiều. Nhờ đó, mình chủ động hơn
+                và không còn ngại khi bắt đầu hội thoại."
+              </p>
+            </div>
           </div>
 
-          <div
-            class="testimonial-card scroll-fade-up"
-            style="transition-delay: 0.1s"
+          <button
+            class="slider-nav slider-prev"
+            onclick="scrollTestimonials(-1)"
+            style="left: -20px"
           >
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <img src="avt2.jpg" alt="Phương Anh" />
-              </div>
-              <div>
-                <h4 class="testimonial-name">Hồ Thị Phương Anh</h4>
-                <p class="testimonial-role">Sinh viên năm 2 ULIS</p>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "Mình thích SpeakUp vì dễ tìm người cùng trình độ và sắp xếp thời
-              gian linh hoạt. Việc luyện nói trở nên đều đặn hơn thay vì ngẫu
-              hứng như trước. Nhờ đó, mình thấy kỹ năng speaking cải thiện rõ
-              rệt."
-            </p>
-          </div>
-
-          <div
-            class="testimonial-card scroll-fade-up"
-            style="transition-delay: 0.2s"
-          >
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <img src="avt3.jpg" alt="Thu Hà" />
-              </div>
-              <div>
-                <h4 class="testimonial-name">Lê Thu Hà</h4>
-                <p class="testimonial-role">Người học tự do</p>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "SpeakUp giúp mình có môi trường luyện nói ổn định và dễ duy trì.
-              Các chủ đề gợi ý rất hữu ích, không còn bị bí ý khi nói. Mình cảm
-              thấy tự tin hơn khi sử dụng tiếng Anh trong giao tiếp hàng ngày."
-            </p>
-          </div>
-
-          <div
-            class="testimonial-card scroll-fade-up"
-            style="transition-delay: 0.3s"
-          >
-            <div class="testimonial-header">
-              <div class="testimonial-avatar">
-                <img src="avt4.jpg" alt="Như Ngọc" />
-              </div>
-              <div>
-                <h4 class="testimonial-name">Phạm Nguyễn Như Ngọc</h4>
-                <p class="testimonial-role">Sinh viên năm 3 ULIS</p>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "Mình ấn tượng với cách SpeakUp tạo động lực học tập, không còn
-              cảm giác học một mình. Các buổi luyện nói trở nên thú vị hơn nhờ
-              có định hướng và tương tác hai chiều. Nhờ đó, mình chủ động hơn và
-              không còn ngại khi bắt đầu hội thoại."
-            </p>
-          </div>
-          </div>
-
-          <button class="slider-nav slider-prev" onclick="scrollTestimonials(-1)" style="left: -20px">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
-          <button class="slider-nav slider-next" onclick="scrollTestimonials(1)" style="right: -20px">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <button
+            class="slider-nav slider-next"
+            onclick="scrollTestimonials(1)"
+            style="right: -20px"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
