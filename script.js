@@ -528,11 +528,8 @@ let currentVidSlideIdx = 0;
 let vidSlideInterval;
 
 function startVidSlider() {
-  const slides = document.querySelectorAll('.media-video-slide');
-  if (!slides.length) return;
-  vidSlideInterval = setInterval(() => {
-    goToVidSlide(currentVidSlideIdx + 1);
-  }, 4500); // 4.5 seconds
+  // Auto-slide disabled by user request
+  return;
 }
 
 function goToVidSlide(n) {
@@ -583,6 +580,6 @@ function toggleVideo(card) {
     video.pause();
     card.classList.remove('is-playing');
     if (duration) duration.style.display = 'block';
-    startVidSlider(); // resume sliding when paused
+    // startVidSlider(); // resume sliding when paused - disabled
   }
 }
