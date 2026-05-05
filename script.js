@@ -164,10 +164,10 @@ function scrollTestimonials(dir) {
   if (!grid) return;
   const cards = grid.querySelectorAll('.testimonial-card');
   if (!cards.length) return;
-  
+
   const step = cards[0].offsetWidth + 30; // Card width + gap
   const maxScroll = grid.scrollWidth - grid.clientWidth;
-  
+
   if (dir === 1 && grid.scrollLeft >= maxScroll - 10) {
     grid.scrollTo({ left: 0, behavior: 'smooth' });
   } else if (dir === -1 && grid.scrollLeft <= 10) {
@@ -192,10 +192,10 @@ function scrollBenefits(dir) {
   if (!grid) return;
   const cards = grid.querySelectorAll('.overlapping-card');
   if (!cards.length) return;
-  
+
   const step = cards[0].offsetWidth + 140; // Card width + margin (80) + gap (60)
   const maxScroll = grid.scrollWidth - grid.clientWidth;
-  
+
   if (dir === 1 && grid.scrollLeft >= maxScroll - 10) {
     grid.scrollTo({ left: 0, behavior: 'smooth' });
   } else if (dir === -1 && grid.scrollLeft <= 10) {
@@ -506,9 +506,9 @@ function goToSlide(n) {
 
   slides[currentSlideIdx].classList.remove('active');
   indicators[currentSlideIdx].classList.remove('active');
-  
+
   currentSlideIdx = (n + slides.length) % slides.length;
-  
+
   slides[currentSlideIdx].classList.add('active');
   indicators[currentSlideIdx].classList.add('active');
 }
@@ -542,9 +542,9 @@ function goToVidSlide(n) {
 
   slides[currentVidSlideIdx].classList.remove('active');
   indicators[currentVidSlideIdx].classList.remove('active');
-  
+
   currentVidSlideIdx = (n + slides.length) % slides.length;
-  
+
   slides[currentVidSlideIdx].classList.add('active');
   indicators[currentVidSlideIdx].classList.add('active');
 }
