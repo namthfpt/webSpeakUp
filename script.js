@@ -537,6 +537,16 @@ function goToVidSlide(n) {
   const indicators = document.querySelectorAll('.vid-indicator');
   if (!slides.length) return;
 
+  slides.forEach(slide => {
+    const video = slide.querySelector('video');
+    const duration = slide.querySelector('.video-duration');
+    if (video && !video.paused) {
+      video.pause();
+      slide.classList.remove('is-playing');
+      if (duration) duration.style.display = 'block';
+    }
+  });
+
   slides[currentVidSlideIdx].classList.remove('active');
   indicators[currentVidSlideIdx].classList.remove('active');
 
@@ -551,9 +561,6 @@ function changeVidSlide(dir) {
   if (!slides.length) return;
   clearInterval(vidSlideInterval);
   goToVidSlide(currentVidSlideIdx + dir);
-  vidSlideInterval = setInterval(() => {
-    goToVidSlide(currentVidSlideIdx + 1);
-  }, 4500);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
