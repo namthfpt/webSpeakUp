@@ -602,6 +602,8 @@
           box-shadow 0.25s;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
       .benefit-card:hover {
@@ -644,7 +646,7 @@
       .benefits-slider-container {
         position: relative;
         padding: 0 40px;
-        max-width: 1000px;
+        width: 100%;
         margin: 0 auto;
       }
 
@@ -685,7 +687,7 @@
       }
 
       .overlapping-img {
-        width: 90%;
+        width: 80%;
         height: 240px;
         border-radius: 12px;
         border: 2px solid #bae6fd;
@@ -702,7 +704,7 @@
       }
 
       .overlapping-text {
-        width: 45%;
+        width: 60%;
         background: white;
         border: 2px solid #bae6fd;
         border-radius: 12px;
