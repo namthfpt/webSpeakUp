@@ -454,7 +454,7 @@
           style="margin-top: 80px"
         >
           <div class="text-center">
-          <h2 class="section-title">Khám phá SpeakUp trong thực tế</h2>
+            <h2 class="section-title">Khám phá SpeakUp trong thực tế</h2>
             <p class="section-sub">
               Giao diện trực quan, tính năng kết nối thông minh. Trải nghiệm môi
               trường luyện nói tối ưu dành riêng cho bạn.
@@ -668,7 +668,8 @@
         <div class="text-center" style="margin-top: 60px">
           <h2 class="section-title">Hành trình SpeakUp</h2>
           <p class="section-sub">
-            Từ ý tưởng đến thực tế – nhìn lại quá trình phát triển và kết quả đáng ghi nhận của dự án.
+            Từ ý tưởng đến thực tế – nhìn lại quá trình phát triển và kết quả
+            đáng ghi nhận của dự án.
           </p>
         </div>
         <!-- Videos Slider Moved from Media Showcase -->
@@ -676,21 +677,21 @@
           class="media-video-slider-container scroll-fade-up"
           style="margin-top: 32px"
         >
-          <div class="media-video-slide active" onclick="toggleVideo(this)">
-            <video
-              src="vid2.mp4"
-              playsinline
-              controls
-              class="video-thumbnail"
-            ></video>
+          <div class="media-video-slide active">
+            <div class="video-wrapper" onclick="toggleVideo(this.parentElement)">
+              <video src="vid2.mp4" playsinline class="video-thumbnail"></video>
+              <button class="video-overlay" aria-label="Play / Pause">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+            </div>
           </div>
-          <div class="media-video-slide" onclick="toggleVideo(this)">
-            <video
-              src="vid4.mp4"
-              playsinline
-              controls
-              class="video-thumbnail"
-            ></video>
+          <div class="media-video-slide">
+            <div class="video-wrapper" onclick="toggleVideo(this.parentElement)">
+              <video src="vid4.mp4" playsinline class="video-thumbnail"></video>
+              <button class="video-overlay" aria-label="Play / Pause">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+            </div>
           </div>
           <!-- Navigation Buttons -->
           <button
